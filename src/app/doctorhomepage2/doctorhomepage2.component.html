@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-10">
+                <form #docregister="ngForm" (ngSubmit)="Dregister()">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <h1 align="center" style="background-color: #75E6DA;">DOCTOR REGISTRATION</h1>
+                        <label for="" class="form label">NAME</label>
+                        <input type="text" class="form-control" [(ngModel)]="data.doctorName" name="doctor name">
+                        <label for="" class="form label">DEPARTMENT</label>
+                        <select name="" id="" class="form-control" [(ngModel)]="data.doctorDepartment" name="department">
+                            <option value="SELECT">SELECT</option>
+                            <option value="General Medicine">General Medicine</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Dermatology">Dermatology</option>
+                        </select>
+                        <label for="" class="form label">USERNAME</label>
+                        <input type="text" class="form-control" [(ngModel)]="data.doctorUsername" name="username">
+                        <label for="" class="form label">PASSWORD</label>
+                        <input type="password" id="" class="form-control" [(ngModel)]="data.doctorPassword" name="password">
+                        <label for="" class="form label">DOCTOR UNIQUE ID</label>
+                        <input type="text" class="form-control" [(ngModel)]="data.doctorUniqueId" name="uniqueid">
+                        <br><br><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4">REGISTER</button>
+                    </div>
+                </form>
+                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">STATUS</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                DOCTOR SUCCESSFULLY REGISTERED.
+                            </div>
+                            <div class="modal-footer">
+                                <a routerLink="/dl"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">GO TO LOGIN PAGE</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

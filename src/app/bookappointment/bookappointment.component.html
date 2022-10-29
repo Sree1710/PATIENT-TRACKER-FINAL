@@ -1,0 +1,44 @@
+<app-patnav></app-patnav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-10">
+            <form #bookappointment="ngForm" (ngSubmit)="Bapp()">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <h1 align="center" style="background-color: #75E6DA;">APPOINTMENT BOOKING PORTAL</h1> 
+            <label for="" class="form-label">NAME</label>
+            <input type="text" class="form-control" [(ngModel)]="data4.bookname" name="bookname">
+            <label for="" class="form-label">AGE</label>
+            <input type="text" class="form-control" [(ngModel)]="data4.bookage" name="bookage">
+            <label for="" class="form-label">DATE OF APPOINTMENT</label>
+            <input type="date" class="form-control" [(ngModel)]="data4.bookdate" name="bookdate">
+            <label for="" class="form-label">DOCTOR</label>
+            <select name="bookdoc" [(ngModel)]="data4.bookdoc" class="form-control">
+            <option value="SELECT">SELECT</option>
+            <option *ngFor="let i of data7" value="{{i.doctorName}}">{{i.doctorName}}</option>
+            </select><br>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            BOOK APPOINTMENT
+            </button>
+            </div>
+            </form>
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">APPOINTMENT STATUS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      APPOINTMENT SUCCESSFULLY BOOKED.
+                    </div>
+                    <div class="modal-footer">
+                      <a routerLink="/pl"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">LOG OUT</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

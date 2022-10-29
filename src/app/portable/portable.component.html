@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-10">
+                <form #adminlogin="ngForm" (ngSubmit)="Alogin()">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <h1 align="center" style="background-color: #75E6DA;">ADMIN LOGIN</h1>
+                 <label for="" class="form label">USERNAME</label>
+                 <input type="text" class="form-control" name="username" [(ngModel)]="username">
+                 <label for="" class="form label">PASSWORD</label>
+                 <input type="password" name="password" class="form-control" [(ngModel)]="password"><br><br>
+                 <button class="btn btn-primary">SIGN IN</button>
+                </div>
+               </form>
+            </div>
+        </div>
+    </div>
+</div>
+

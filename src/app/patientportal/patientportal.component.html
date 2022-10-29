@@ -1,0 +1,33 @@
+<app-docnav></app-docnav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" align="center">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            
+            
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                  <h3 align="center" style="background-color:#75E6DA">PATIENT DETAILS</h3><br><br>
+<table class="table table-striped" >
+    <thead>
+      <tr style="background-color: #189AB4">
+        <th scope="col">PATIENT NAME</th>
+        <th scope="col">AGE</th>
+        <th scope="col">PHONE NUMBER</th>
+        <th scope="col">PAST MEDICAL HISTORY</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let i of dataa">
+        <td>{{i.patientName}}</td>
+        <td>{{i.patientAge}}</td>
+        <td>{{i.patientPhonenumber}}</td>
+        <td>{{i.patientHistory}}</td>
+      </tr>
+      </tbody>
+      
+  </table>
+  </div>
+    </div>
+    </div>
+</div>

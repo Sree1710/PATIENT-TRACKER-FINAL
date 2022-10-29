@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-10">
+                <form #doclogin="ngForm" (ngSubmit)="Dlogin()">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <h1 align="center" style="background-color:#75E6DA ;">DOCTOR LOGIN</h1>
+                        <label for="" class="form label">USERNAME</label>
+                        <input type="text" class="form-control" [(ngModel)]="data.doctorUsername" name="username">
+                        <label for="" class="form label">PASSWORD</label>
+                        <input type="password" id="" class="form-control" [(ngModel)]="data.doctorPassword" name="password"><br><br>
+                        <button class="btn btn-primary">SIGN IN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

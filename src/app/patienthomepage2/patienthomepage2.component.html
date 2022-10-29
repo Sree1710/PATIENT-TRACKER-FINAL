@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-10">
+               <form #register="ngForm" (ngSubmit)="Pregister()">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <h1 align="center" style="background-color: #75E6DA;">PATIENT REGISTRATION</h1>
+                <label for="" class="form label">NAME</label>
+                <input type="text" class="form-control" [(ngModel)]="dataa.patientName" name="patient name">
+                <label for="" class="form label">AGE</label>
+                <input type="text" class="form-control" [(ngModel)]="dataa.patientAge" name="patient age">
+                <label for="" class="form label">PHONE NUMBER</label>
+                <input type="text" id="" class="form-control" [(ngModel)]="dataa.patientPhonenumber" name="phone number">
+                <label for="" class="form-label">PAST MEDICAL HISTORY</label>
+                <input type="text" class="form-control" [(ngModel)]="dataa.patientHistory" name="medical history">
+                <label for="" class="form label">USERNAME</label>
+                <input type="text" class="form-control" [(ngModel)]="dataa.patientUsername" name="username">
+                <label for="" class="form label">PASSWORD</label>
+                <input type="password" name="" id="" class="form-control" [(ngModel)]="dataa.patientPassword" name="password">
+                <br><br><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">REGISTER</button>
+                </div>
+                </form>
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">STATUS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          PATIENT SUCCESSFULLY REGISTERED.
+                        </div>
+                        <div class="modal-footer">
+                          <a routerLink="/pl"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">GO TO LOGIN PAGE</button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
