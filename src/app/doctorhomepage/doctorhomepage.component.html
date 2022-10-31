@@ -2,13 +2,23 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-10">
-                <form #doclogin="ngForm" (ngSubmit)="Dlogin()">
+                <form class="row g-3 needs-validation" novalidate #doclogin="ngForm" (ngSubmit)="doclogin.valid && Dlogin()">
                     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                         <h1 align="center" style="background-color:#75E6DA ;">DOCTOR LOGIN</h1>
-                        <label for="" class="form label">USERNAME</label>
-                        <input type="text" class="form-control" [(ngModel)]="data.doctorUsername" name="username">
-                        <label for="" class="form label">PASSWORD</label>
-                        <input type="password" id="" class="form-control" [(ngModel)]="data.doctorPassword" name="password"><br><br>
+                        <div>
+                        <label for="validationCustomName" class="form label">USERNAME</label>
+                        <input id="validationCustomName" type="text" class="form-control" [(ngModel)]="data.doctorUsername" name="username" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid username.
+                        </div>
+                        </div>
+                        <div>
+                        <label for="validationCustomPassword" class="form label">PASSWORD</label>
+                        <input id="validationCustomPassword" type="password" class="form-control" [(ngModel)]="data.doctorPassword" name="password" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid password.
+                        </div>
+                        </div><br>
                         <button class="btn btn-primary">SIGN IN</button>
                     </div>
                 </form>

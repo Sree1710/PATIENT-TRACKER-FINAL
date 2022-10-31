@@ -17,6 +17,21 @@ export class DoctorhomepageComponent implements OnInit {
   constructor(private api: PatientserviceService, private router: Router) { }
 
   ngOnInit(): void {
+    (() => {
+      'use strict'
+    
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.prototype.slice.call(forms).forEach(form => {
+        form.addEventListener('submit',function(event:any){
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+    
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
   }
 
   Dlogin() {

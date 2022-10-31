@@ -2,40 +2,55 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-10">
-               <form #register="ngForm" (ngSubmit)="Pregister()">
+               <form class="row g-3 needs-validation" novalidate #register="ngForm" (ngSubmit)="register.valid && Pregister()">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                 <h1 align="center" style="background-color: #75E6DA;">PATIENT REGISTRATION</h1>
+                <div>
                 <label for="" class="form label">NAME</label>
-                <input type="text" class="form-control" [(ngModel)]="dataa.patientName" name="patient name">
+                <input type="text" class="form-control" [(ngModel)]="dataa.patientName" name="patient name" required>
+                <div class="invalid-feedback">
+                    Enter your name.
+                </div>
+                </div>
+                <div>
                 <label for="" class="form label">AGE</label>
-                <input type="text" class="form-control" [(ngModel)]="dataa.patientAge" name="patient age">
+                <input type="text" class="form-control" [(ngModel)]="dataa.patientAge" name="patient age" required>
+                <div class="invalid-feedback">
+                    Enter your age.
+                </div>
+                </div>
+                <div>
                 <label for="" class="form label">PHONE NUMBER</label>
-                <input type="text" id="" class="form-control" [(ngModel)]="dataa.patientPhonenumber" name="phone number">
+                <input type="text" id="" class="form-control" [(ngModel)]="dataa.patientPhonenumber" name="phone number" required>
+                <div class="invalid-feedback">
+                    Enter your phone number.
+                </div>
+                </div>
+                <div>
                 <label for="" class="form-label">PAST MEDICAL HISTORY</label>
-                <input type="text" class="form-control" [(ngModel)]="dataa.patientHistory" name="medical history">
+                <input type="text" class="form-control" [(ngModel)]="dataa.patientHistory" name="medical history" required>
+                <div class="invalid-feedback">
+                    Mention your past medical history.
+                </div>
+                </div>
+                <div>
                 <label for="" class="form label">USERNAME</label>
-                <input type="text" class="form-control" [(ngModel)]="dataa.patientUsername" name="username">
+                <input type="text" class="form-control" [(ngModel)]="dataa.patientUsername" maxlength="15" minlength="5" name="username" required>
+                <div class="invalid-feedback">
+                    Enter a valid username.
+                </div>
+                </div>
+                <div>
                 <label for="" class="form label">PASSWORD</label>
-                <input type="password" name="" id="" class="form-control" [(ngModel)]="dataa.patientPassword" name="password">
-                <br><br><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">REGISTER</button>
+                <input type="password" name="" id="" class="form-control" [(ngModel)]="dataa.patientPassword" maxlength="8" minlength="8" name="password" required>
+                <div class="invalid-feedback">
+                    Provide a secure password.(8 characters)
+                </div>
+                </div>
+                <br><br><button class="btn btn-primary">REGISTER</button>
                 </div>
                 </form>
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">STATUS</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          PATIENT SUCCESSFULLY REGISTERED.
-                        </div>
-                        <div class="modal-footer">
-                          <a routerLink="/pl"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">GO TO LOGIN PAGE</button></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                
             </div>
         </div>
     </div>
