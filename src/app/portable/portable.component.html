@@ -1,14 +1,26 @@
+<app-navbar></app-navbar>
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-10">
-                <form #adminlogin="ngForm" (ngSubmit)="Alogin()">
+                <form class="row g-3 needs-validation" #adminlogin="ngForm" (ngSubmit)="adminlogin.valid && Alogin()">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <h1 align="center" style="background-color: #75E6DA;">ADMIN LOGIN</h1>
+                 <h1 align="center" style="background-color: #75E6DA;">ADMIN LOGIN</h1>
+                 <div>
                  <label for="" class="form label">USERNAME</label>
-                 <input type="text" class="form-control" name="username" [(ngModel)]="username">
+                 <input type="text" class="form-control" name="username" [(ngModel)]="username" required>
+                 <div class="invalid-feedback">
+                    Please provide a valid username.
+                </div>
+                 </div>
+                 <div>
                  <label for="" class="form label">PASSWORD</label>
-                 <input type="password" name="password" class="form-control" [(ngModel)]="password"><br><br>
+                 <input type="password" name="password" class="form-control" [(ngModel)]="password" required>
+                 <div class="invalid-feedback">
+                    Please provide a valid password.
+                </div>
+                 </div>
+                 <br>
                  <button class="btn btn-primary">SIGN IN</button>
                 </div>
                </form>
